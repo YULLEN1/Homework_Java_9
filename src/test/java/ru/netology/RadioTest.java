@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
-    Radio radio = new Radio();
+    Radio radio = new Radio(10);
 
     @Test
     public void increaseVolume() {   //прибавить громкость
+        Radio radio = new Radio(10);
         radio.setCurrentVolume(99);
         radio.volumeUp();
 
