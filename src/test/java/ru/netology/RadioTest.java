@@ -54,9 +54,9 @@ public class RadioTest {
 
     @Test
     public void setStation() {      //выбор станции
-        radio.setCurrentRadioStation(9);
+        radio.setCurrentRadioStation(5);
 
-        int expected = 9;
+        int expected = 5;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -64,10 +64,11 @@ public class RadioTest {
 
     @Test
     public void nextStation() {     //следующая станция
-        radio.setCurrentRadioStation(8);
+        Radio radio = new Radio(15);
+        radio.setCurrentRadioStation(12);
         radio.next();
 
-        int expected = 9;
+        int expected = 13;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -76,7 +77,6 @@ public class RadioTest {
     public void nextStationMax() {     //следующая станция после Max
         radio.setCurrentRadioStation(9);
         radio.next();
-
         int expected = 0;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
@@ -84,10 +84,11 @@ public class RadioTest {
 
     @Test
     public void prevStation() {     //предыдущая станция
-        radio.setCurrentRadioStation(1);
+        Radio radio = new Radio(15);
+        radio.setCurrentRadioStation(14);
         radio.prev();
 
-        int expected = 0;
+        int expected = 13;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -137,5 +138,6 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
 }
 
