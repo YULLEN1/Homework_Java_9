@@ -64,7 +64,7 @@ public class RadioTest {
 
     @Test
     public void nextStation() {     //следующая станция
-        Radio radio = new Radio (15);
+        Radio radio = new Radio(15);
         radio.setCurrentRadioStation(12);
         radio.next();
 
@@ -84,7 +84,7 @@ public class RadioTest {
 
     @Test
     public void prevStation() {     //предыдущая станция
-        Radio radio = new Radio (15);
+        Radio radio = new Radio(15);
         radio.setCurrentRadioStation(14);
         radio.prev();
 
